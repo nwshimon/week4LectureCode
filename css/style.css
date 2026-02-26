@@ -9,6 +9,12 @@ h1 {
 	font-size: 2rem;
 }
 
+h2 {
+	text-align: center;
+	margin: 10px;
+	font-size: 2rem;
+}
+
   /* style the grid container
   Dislay should be grid
   Give it 3 columns of equal size
@@ -18,23 +24,68 @@ h1 {
 
 .grid {
 		display: grid;
+		grid-template-columns: 25% 25% 25%;
+		gap: 10px;
 /* add a background-color:  of #2196f3
 Add  a background image that links to the image in your folder */
-			padding: 10px;
-			width: 620px;
+		background-color: #2196f3;
+		background-image: url("../images/background.jpg");
+
+		padding: 10px;
+		width: 620px;
 /* Add a solid black 3px border and round the corners */
-			text-align: center;
-			font-size: 30px;
-		  }
+		border: solid black 3px;
+		text-align: center;
+		font-size: 30px;
+/* we can also add grid-template-areas: */
+
+    grid-template-areas:
+        "header header header"
+        "main   main   sidebar"
+        "footer footer footer";
+}
+	}
+
 
 /* Style the divs inside of the grid 
 Give them a background of #e5e5e5 
 Add 20px of padding & font-size of 30px  */
+.grid > div {
+	background-color: #e5e5e5;
+	padding: 20px;
+	font-size: 30px;
+}
 
+.item1 {
+	grid-column: 200px; /*doesn't do anything b/c this is a CHILD ELEMENT*/
+	/* ^^ only able to change the grid-column with px if in parent */
+	
+	/* otherwise, use grid-column-start and grid-column-end */
+	grid-column-start: 1;
+	grid-column-end: 3;
+}
+
+.item2 {
+	/* OR use span */
+	grid-column: span 2;
+}
+
+.item3 {
+	/* OR use negative line numbers */
+	grid-column: 1 / -1;
+		/* == Start at the first column line and go all the way to the last line. */
+}
+
+.grid .item_a {
+	grid-column: 1 / 3;
+}
+
+.grid .item_b {
+	grid-column: 2 / 3;
+}
 
 
 /* Now try and style the individual boxes using grid-column */
-
 
 	/* Play with: */
 	/* justify-content:; */
