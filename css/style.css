@@ -38,11 +38,6 @@ Add  a background image that links to the image in your folder */
 		text-align: center;
 		font-size: 30px;
 /* we can also add grid-template-areas: */
-
-    grid-template-areas:
-        "header header header"
-        "main   main   sidebar"
-        "footer footer footer";
 }
 
 
