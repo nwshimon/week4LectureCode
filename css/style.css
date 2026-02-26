@@ -3,12 +3,19 @@ Make the text centered
 Give it a margin of 10px
 Font size should be twice the normal size */
 
+h1 {
+	text-align: center;
+	margin: 10px;
+	font-size: 2rem;
+}
 
   /* style the grid container
   Dislay should be grid
   Give it 3 columns of equal size
   Grid gap of 10px
    */
+
+
 .grid {
 		display: grid;
 /* add a background-color:  of #2196f3
